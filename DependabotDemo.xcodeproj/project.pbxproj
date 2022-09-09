@@ -13,6 +13,7 @@
 		4E71E76528CACDB500BC5881 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71E75328CACDB200BC5881 /* ContentView.swift */; };
 		4E71E76628CACDB500BC5881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E71E75428CACDB500BC5881 /* Assets.xcassets */; };
 		4E71E76728CACDB500BC5881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E71E75428CACDB500BC5881 /* Assets.xcassets */; };
+		4E71E77228CACE1E00BC5881 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4E71E77128CACE1E00BC5881 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E71E77228CACE1E00BC5881 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +96,9 @@
 			dependencies = (
 			);
 			name = "DependabotDemo (iOS)";
+			packageProductDependencies = (
+				4E71E77128CACE1E00BC5881 /* Introspect */,
+			);
 			productName = "DependabotDemo (iOS)";
 			productReference = 4E71E75928CACDB500BC5881 /* DependabotDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +147,10 @@
 				Base,
 			);
 			mainGroup = 4E71E74C28CACDB100BC5881;
+			packageReferences = (
+				4E71E77028CACE1E00BC5881 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				4E71E77328CACE6800BC5881 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 4E71E75A28CACDB500BC5881 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -450,6 +459,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E71E77028CACE1E00BC5881 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4E71E77328CACE6800BC5881 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E71E77128CACE1E00BC5881 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E71E77028CACE1E00BC5881 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E71E74D28CACDB100BC5881 /* Project object */;
 }
